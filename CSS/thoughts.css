@@ -1,0 +1,355 @@
+/* colors
+  #2F2A2F text color
+  #4e464e hover text color
+  #917081 light purple
+  #B8D9C8 light blue
+  #750E49 dark purple
+  #4D002B very dark purple
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  body {
+    color: #2F2A2F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+  
+  .inter300 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 4vh;
+    line-height: 1.5em;
+    margin: .2em 0 .6em;
+  }
+  
+  .inter900 {
+    font-size: 6vw;
+    line-height: 1.1em;
+    line-height: .9em;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.3em;
+  }
+  
+  .purple-background {
+    background: linear-gradient(270deg, #836574, #a78d9a);
+    background-size: 600% 600%;
+  
+    -webkit-animation: background-animation 60s ease infinite;
+    -moz-animation: background-animation 60s ease infinite;
+    animation: background-animation 60s ease infinite;
+  }
+  
+  .blue-background {
+    background: linear-gradient(270deg, #B8D9C8, #86bea1);
+    background-size: 600% 600%;
+    color: #2F2A2F;
+  
+    -webkit-animation: background-animation 60s ease infinite;
+    -moz-animation: background-animation 60s ease infinite;
+    animation: background-animation 60s ease infinite;
+  }
+  
+  @-webkit-keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @-moz-keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  
+  
+  header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-content {
+    width: 100%;
+    text-align: left;
+  }
+  
+  nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #nav-link {
+    font-size: 4vh;
+    color: #2F2A2F;
+    margin: 30px;
+    cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  /* switch button */
+
+.switch-button {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  will-change: transform;
+  z-index: 197 !important;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border: 1px solid white;
+  margin: 30px;
+}
+
+.switch-button-case {
+  background: none;
+  width: 50%;
+  height: 100%;
+  color: white;
+  border: none;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.switch-button-case:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.switch-button-case:focus {
+  outline: none;
+}
+
+.switch-button .active {
+  color: #2F2A2F;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.3s ease-out all;
+}
+
+.switch-button .active-case {
+  color: #2F2A2F;
+}
+
+  
+.purple-underline {
+  background-image: linear-gradient(180deg, transparent 65%, #836574 0);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .4s ease;
+}
+
+.purple-underline:hover {
+  background-size: 100% 100%;
+  letter-spacing: 1px;
+  transition: all 0.7s;
+}
+
+.blue-underline {
+  background-image: linear-gradient(180deg, transparent 65%, #B8D9C8 0);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  transition: background-size .4s ease;
+}
+
+.blue-underline:hover {
+  background-size: 100% 100%;
+  letter-spacing: 1px;
+  transition: all 0.7s;
+}
+
+  .line-break {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 20px 0;
+  }
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 5px solid #B8D9C8;
+    padding: 0;
+    width: 25%;
+  }
+  
+  #tools {
+    color: #2F2A2F;
+    font-size: 3vh;
+    padding: 0 20px;
+  }
+  
+  .project-name {
+    max-width: fit-content;
+    font-size: 5vw;
+  }
+  
+  .project-item {
+    /* min-height: 80vh; */
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  
+  .section-title-content {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .project-item-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .project-item-text-content {
+    width: 50%;
+    text-align: left;
+  }
+
+  .section-image {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+  
+img {
+    width: 50vw;
+    height: auto;
+}
+
+  #arrow {
+    color: #B8D9C8;
+    padding: 0 10px;
+  }
+
+  #arrow:hover {
+    color: #917081;
+    transition: all 0.4s;
+    font-size: 30px;
+  }
+ 
+  .read-more {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    height: 20vh;
+  }
+  
+  i {
+    font-size: 30px;
+    padding: 0 30px;
+    color:#2F2A2F;
+  }
+  
+  .social-media:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+    color:  #4e464e;
+    cursor: pointer;
+  }
+
+  .link-button {
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px;
+    transition: 0.3s ease all;
+    border: 1px solid white;
+    border-radius: 0em;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 20px 0;
+  }
+  
+  .link-button:hover{
+    transition: 0.3s ease all;
+    background: none;
+    color: #fff;
+  }
+
+  h1.ml8 {
+    font-weight: 900;
+    font-size: 4.5em;
+    color: #fff;
+  }
+  
+  .ml8 .letters-container {
+    margin: auto;
+    height: 1em;
+  }
+  
+  .ml8 .letters {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    line-height: 0.7em;
+    right: -0.12em;
+    top: -0.2em;
+  }
+  
+  .ml8 .bang {
+    font-size: 1.4em;
+    top: auto;
+    left: -0.06em;
+  }
+  
+  .fadein {
+    opacity: 0;
+  }
+
+  @media (max-width: 975px) {
+
+    nav {
+      position: sticky;
+    }
+  
+    .header-content {
+      height: 80vh;
+    }
+  }
+  
+

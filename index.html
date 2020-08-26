@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <title>Alana Cargill</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <script src="JS/jquery.js"></script> 
+        <script src="JS/fadein.js"></script>
+        <script src="JS/text-animation-portfolio.js"></script>
+        <script src="JS/switch-button.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </head>
+    <body>
+        <div class="purple-background">
+            <nav>
+                <div class="switch-button">
+                    <span class="active"></span>
+                    <button class="switch-button-case left active-case">Purple</button>
+                    <button class="switch-button-case right">Blue</button>
+                </div>
+                <div class="nav-text">
+                    <h3><a class="inter900 blue-underline" id="nav-link" href="./thoughts.html">Thoughts</a></h3>
+                </div>
+            </nav>
+            <header>
+                <div class="header-content">
+                    <h3 class="inter300">Hi, I'm</h3>
+                    <h1 class="ml10">
+                        <span class="text-wrapper">
+                          <span class="letters">Alana Cargill</span>
+                        </span>
+                      </h1>
+                    <h3 class="inter300">I create and design websites, love learning about CSS and focus on good UX and web accessibility.</h3>
+                </div>
+            </header>
+            <main>
+                <div class="projects">
+                    <div class="section-title fadein">
+                        <div class="section-title-content">
+                            <h1 class="inter900">Projects</h1>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="line-break fadein">
+                            <hr/>
+                            <div class="inter300" id="tools">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-css3-alt"></i>
+                                <i class="fab fa-js-square"></i>
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+                        <div class="project-item-container">
+                            <div class="project-item-text fadein">
+                                <h1 class="inter900 blue-underline project-name"><a href="https://alanarandomquote.netlify.app/">Quote Generator</a></h1>
+                                <h3 class="inter300 project-description">A random quote generator using React to talk to a RESTful API.</h3>
+                                <div class="buttons">
+                                    <button class="link-button"><a href="https://github.com/alanacargill/random-quote-generator">Github</a></button>
+                                </div>
+                            </div>
+                            <div class="section-image fadein">
+                                <img src="Project-images/Random-quote-generator.PNG" alt="Image of my app">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-break fadein">
+                    <hr/>
+                </div>
+                <div class="contact-section">
+                    <div class="contact-text fadein">
+                        <h1 class="inter900">Contact me!</h1>
+                        <h3 class="inter300">Have a website idea, any questions, or just want to say hi? Pop me a message and I'll get back to you as soon as possible.</h3>
+                    </div>
+                    <div class="contact-form fadein">
+                        <form method="POST" data-netlify="true">
+                            <label class="inter300" id="labels">FULL NAME</label>
+                            <input type="text" name="name" placeholder="First Last">
+                            <label class="inter300" id="labels">YOUR EMAIL</label>
+                            <input type="text" name="mail" placeholder="name@example.com">
+                            <label class="inter300" id="labels">SUBJECT</label>
+                            <input type="text" name="subject" placeholder="What do you want to talk about?">
+                            <label class="inter300" id="labels">MESSAGE</label>
+                            <textarea name="message" placeholder="Leave your message here!"></textarea>
+                            <div class="form-button-section">
+                                <button class="link-button" type="submit" name="submit">SEND</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <a href="https://twitter.com/CargillAlana"><i class="social-media fab fa-twitter"></i></a>
+                <a href="https://codepen.io/alanacargill"><i class="social-media fab fa-codepen"></i></a>
+                <a href="https://github.com/alanacargill"><i class="social-media fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alana-cargill-0606941a0/"><i class="social-media fab fa-linkedin-in"></i></a>
+            </footer>
+        </div>
+    </body>
+</html>
+

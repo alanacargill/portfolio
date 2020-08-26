@@ -1,0 +1,319 @@
+/* colors
+  #2F2A2F text color
+  #4e464e hover text color
+  #a78d9a light purple
+  #B8D9C8 light blue
+  #750E49 dark purple
+  #4D002B very dark purple
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  body {
+    color: #2F2A2F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
+  .title {
+    font-size: 6vw;
+    line-height: 1.1em;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 4vh;
+    line-height: 1.5em;
+    margin: .2em 0 .6em;
+    letter-spacing: 0.5px;
+  }
+  
+  .inter300 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 3vh;
+    line-height: 1.8em;
+    margin: .2em 0 .6em;
+    letter-spacing: 0.5px;
+  }
+  
+  .inter900 {
+    font-size: 5vw;
+    line-height: 1.1em;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.5px;
+  }
+
+  .code-snips {
+      font-family: 'Roboto Mono';
+      background-color: white;
+      padding: 2px;
+  }
+  
+  .purple-background {
+    background: linear-gradient(270deg, #836574, #a78d9a);
+    background-size: 600% 600%;
+  
+    -webkit-animation: background-animation 60s ease infinite;
+    -moz-animation: background-animation 60s ease infinite;
+    animation: background-animation 60s ease infinite;
+  }
+  
+  .blue-background {
+    background: linear-gradient(270deg, #B8D9C8, #86bea1);
+    background-size: 600% 600%;
+    color: #2F2A2F;
+  
+    -webkit-animation: background-animation 60s ease infinite;
+    -moz-animation: background-animation 60s ease infinite;
+    animation: background-animation 60s ease infinite;
+  }
+  
+  @-webkit-keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @-moz-keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @keyframes background-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-content {
+    width: 50%;
+    text-align: left;
+  }
+  
+  nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #nav-link {
+    font-size: 4vh;
+    color: #2F2A2F;
+    margin: 30px;
+    cursor: pointer;
+  }
+
+  /* switch button */
+  
+  .switch-button {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    will-change: transform;
+    z-index: 197 !important;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    border: 1px solid white;
+    margin: 30px;
+  }
+  
+  .switch-button-case {
+    background: none;
+    width: 50%;
+    height: 100%;
+    color: white;
+    border: none;
+    transition: 0.3s ease all;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  
+  .switch-button-case:hover {
+    color: grey;
+    cursor: pointer;
+  }
+  
+  .switch-button-case:focus {
+    outline: none;
+  }
+  
+  .switch-button .active {
+    color: #2F2A2F;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    transition: 0.3s ease-out all;
+  }
+  
+  .switch-button .active-case {
+    color: #2F2A2F;
+  }
+  
+.purple-underline {
+    background-image: linear-gradient(180deg, transparent 65%, #836574 0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease;
+}
+  
+.purple-underline:hover {
+    background-size: 100% 100%;
+    letter-spacing: 1px;
+    transition: all 0.7s;
+}
+  
+.blue-underline {
+    background-image: linear-gradient(180deg, transparent 65%, #B8D9C8 0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease;
+}
+  
+.blue-underline:hover {
+    background-size: 100% 100%;
+    letter-spacing: 1px;
+    transition: all 0.7s;
+}
+  
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.img-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+  
+img {
+    width: 50vw;
+    height: auto;
+}
+
+.blog-content {
+    width: 50%;
+    text-align: left;
+}
+
+.paragraph {
+    margin-bottom: 40px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+.link-button {
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    padding: 10px;
+    transition: 0.3s ease all;
+    border: 1px solid white;
+    border-radius: 0em;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+  
+.link-button:hover{
+    transition: 0.3s ease all;
+    background: none;
+    color: #fff;
+}
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    height: 20vh;
+  }
+  
+  i {
+    font-size: 30px;
+    padding: 0 30px;
+    color:#2F2A2F;
+  }
+  
+  .social-media:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+    cursor: pointer;
+    color:  #4e464e;
+  }
+  
+.social-media {
+    font-size: 30px;
+    padding: 0 30px;
+    color:#2F2A2F;
+}
+  
+.social-media:hover {
+    font-size: 35px;
+    transition: all 0.2s ease-in-out;
+    color:  #4e464e;
+    cursor: pointer;
+}
+  
+  
+#labels {
+    color: #4e464e;
+    font-size: 3vh;
+}
+  
+
+.fadein {
+  opacity: 0;
+}
+
+@media (max-width: 975px) {
+
+    nav {
+      position: sticky;
+    }
+  
+    .header-content {
+      height: 80vh;
+    }
+}
+

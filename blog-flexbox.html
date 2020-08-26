@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <title>Alana Cargill</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./CSS/blog-post.css">
+        <script src="JS/switch-button.js"></script>
+        <script src="JS/jquery.js"></script> 
+        <script src="JS/fadein.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="purple-background">
+            <nav>
+                <div class="nav-text">
+                    <div class="back-text">
+                        <h3><a class="inter900 blue-underline" id="nav-link" href="./thoughts.html">Back to blog</a></h3>
+                    </div>
+                </div>
+                <div class="switch-button">
+                    <span class="active"></span>
+                    <button class="switch-button-case left active-case">Purple</button>
+                    <button class="switch-button-case right">Blue</button>
+                </div>
+            </nav>
+            <header>
+                <div class="header-content">
+                    <h1 class="title">Welcome to Flexbox!</h1>
+                    <h3 class="subtitle">Personally, I love Flexbox and use it for all of my styling. It can be really easy to get started with, and you can achieve complex layouts with only a few declarations.</h3>
+                </div>
+            </header>
+            <main>
+                <div class="blog-content">
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">So why is Flexbox so amazing?</h1>
+                        <h3 class="inter300 fadein">Firstly, it's really well supported: according to the latest figures, it has 98.69% global support (https://caniuse.com/#feat=flexbox), meaning it's supported by nearly all modern browsers. It's also great for dynamic rearranginging for device size - as the name suggests, it's really flexible!</h3>
+                    </div>
+
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">How do we get started with Flexbox?</h1>
+                        <h3 class="inter300 fadein">The first thing to do is establish an area of a document, the <span class="code-snips">container</span>. This will become the parent element, and any children of the container will become <span class="code-snips">flex items</span>.</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/HTML-container.png" alt="HTML div class set to container">
+                        </div>
+                        <h3 class="inter300 fadein">Let's give the flex items some basic styling so we can see what it looks like in the browser.</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/flex-item-style.png" alt="Set the flex item background colors">
+                        </div>
+                        <h3 class="inter300 fadein">Ta da!</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/browser1.PNG" alt="Displayed in the browser">
+                        </div>
+                    </div>
+
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">So what can Flexbox do?</h1>
+                        <h3 class="inter300 fadein">I'm going to focus on just four basic Flexbox properties: <span class="code-snips">flex-direction</span>, <span class="code-snips">justify-content</span> and <span class="code-snips">align-items</span>. While there is a lot more to Flexbox, these properties are a great starting point to beginners - if you're interested in learning more, there will be a resources section at the end of this article.</h3>
+                    </div>
+
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">1. flex-direction</h1>
+                        <h3 class="inter300 fadein">First thing's first, we need to set our container to <span class="code-snips">display: flex</span>. After that, we can add our <span class="code-snips">flex-direction</span> property, which accepts four values: <span class="code-snips">row</span>, <span class="code-snips">column</span>, <span class="code-snips">row-reverse</span> and <span class="code-snips">column-reverse</span>.</h3>
+                        <h3 class="inter300 fadein">Side note: Once the container is set to <span class="code-snips">display: flex</span>, the flex-direction is automatically set to <span class="code-snips">flex-direction: row</span>, so this doesn't need to be specified.</h3>
+                        <h3 class="inter300 fadein">Enough chat - let's take a look at this in action!</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/flex-direction.png" alt="Set the flex-direction property to 'column'">
+                        </div>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/browser2.PNG" alt="Set the flex-direction property to 'row'">
+                        </div>
+                    </div>
+
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">2. Justify-content</h1>
+                        <h3 class="inter300 fadein"><span class="code-snips">justify-content</span> is a really useful Flexbox property. This defines how the flex items are laid out within the container. There are ten values in total for the property, so I'll focus on the most popular ones and post a link to the rest in the resources section.</h3>
+                        <h3 class="inter300 fadein">Examples of <span class="code-snips">justify-content</span> values are <span class="code-snips">flex-start</span>, <span class="code-snips">center</span> and <span class="code-snips">flex-end</span>. Here's how they change the flex item layout:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/justify-content-flex-start.PNG" alt="Set the justify-content property to flex-start">
+                        </div>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/justify-content-center.PNG" alt="Set the justify-content property to center">
+                        </div>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/justify-content-flex-end.PNG" alt="Set the justify-content property to flex-end">
+                        </div>
+                        <h3 class="inter300 fadein">Alternatively, if you wanted to split up your flex items, there are other values you can use to spread them throughout the container:</h3>
+                        <h3 class="inter300 fadein"><span class="code-snips">space-around</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/space-around.PNG" alt="justify-content: space-around">
+                        </div>
+                        <h3 class="inter300 fadein"><span class="code-snips">space-evenly</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/space-evenly.PNG" alt="justify-content: space-evenly">
+                        </div>
+                        <h3 class="inter300 fadein"><span class="code-snips">space-between</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/space-between.PNG" alt="justify-content: space-between">
+                        </div>
+                    </div>
+
+                    <div class="paragraph">
+                        <h1 class="inter900 fadein">3. Align-items</h1>
+                        <h3 class="inter300 fadein"><span class="code-snips">align-items</span> works similarly to <span class="code-snips">justify-content</span>, except on the opposing axis. They work really well together to centre a div if you set both of their values to <span class="code-snips">center</span> - something which is notoriously hard for beginner developers!</h3>.
+                        <h3 class="inter300 fadein">The values for the <span class="code-snips">align-items</span> property are:</h3>.
+                        <h3 class="inter300 fadein"><span class="code-snips">flex-start</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/align-items-start.PNG" alt="align-items: flex-start">
+                        </div>
+                        <h3 class="inter300 fadein"><span class="code-snips">center</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/align-items-center.PNG" alt="align-items: center">
+                        </div>
+                        <h3 class="inter300 fadein"><span class="code-snips">flex-end</span>:</h3>
+                        <div class="img-section fadein">
+                            <img src="Blog-images/align-items-end.PNG" alt="align-items: flex-end">
+                        </div>
+                    </div>
+
+                    <div class="paragraph fadein">
+                        <h1 class="inter900">Extra resources</h1>
+                        <h3 class="inter300">I hope this has given you a good introduction on the basics of Flexbox. As I already mentioned, there is a lot more to learn to utilise Flexbox. Here are some great resources to check out.</h3>
+                        <h3 class="inter300">fullstackstudent: http://fullstackstudent.com/beginners-guide-to-flexbox/</h3>
+                        <h3 class="inter300">FreeCodeCamp: https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/</h3>
+                        <h3 class="inter300">CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/</h3>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <a href="https://twitter.com/CargillAlana"><i class="social-media fab fa-twitter"></i></a>
+                <a href="https://codepen.io/alanacargill"><i class="social-media fab fa-codepen"></i></a>
+                <a href="https://github.com/alanacargill"><i class="social-media fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alana-cargill-0606941a0/"><i class="social-media fab fa-linkedin-in"></i></a>
+            </footer>
+        </div>
+    </body>
+</html>
