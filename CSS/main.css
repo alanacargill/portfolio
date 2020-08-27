@@ -1,12 +1,3 @@
-/* colors
-  #2F2A2F text color
-  #4e464e hover text color
-  #a78d9a light purple
-  #B8D9C8 light blue
-  #750E49 dark purple
-  #4D002B very dark purple
-*/
-
 
 * {
   margin: 0;
@@ -14,7 +5,6 @@
 } 
 
 body {
-  color: #2F2A2F;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
 }
@@ -29,7 +19,7 @@ body {
 }
 
 .inter900 {
-  font-size: 6vw;
+  font-size: 7vw;
   line-height: 1.1em;
   line-height: .9em;
   font-family: 'Inter', sans-serif;
@@ -37,39 +27,23 @@ body {
   letter-spacing: 0.5px;
 }
 
-.purple-background {
-  background: linear-gradient(270deg, #836574, #a78d9a);
-  background-size: 600% 600%;
-
-  -webkit-animation: background-animation 60s ease infinite;
-  -moz-animation: background-animation 60s ease infinite;
-  animation: background-animation 60s ease infinite;
+.copy-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 3vh;
+  line-height: 1.7em;
+  margin: .2em 0 .6em;
+  letter-spacing: 0.5px;
 }
 
-.blue-background {
-  background: linear-gradient(270deg, #B8D9C8, #86bea1);
-  background-size: 600% 600%;
+.day-mode {
   color: #2F2A2F;
-
-  -webkit-animation: background-animation 60s ease infinite;
-  -moz-animation: background-animation 60s ease infinite;
-  animation: background-animation 60s ease infinite;
+  background-color: #E1CFC5;
 }
 
-@-webkit-keyframes background-animation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes background-animation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes background-animation {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+.night-mode {
+  background-color: #232B32;
+  color: #C3B6A2;
 }
 
 header {
@@ -95,7 +69,6 @@ nav {
 
 #nav-link {
   font-size: 4vh;
-  color: #2F2A2F;
   margin: 30px;
   cursor: pointer;
 }
@@ -105,74 +78,85 @@ a {
   text-decoration: inherit;
 }
 
-/* switch button */
+/* toggle button */ 
 
-.switch-button {
-  display: flex;
-  justify-content: flex-start;
-  width: 200px;
-  height: 40px;
-  text-align: center;
-  will-change: transform;
-  z-index: 197 !important;
-  cursor: pointer;
-  transition: 0.3s ease all;
-  border: 1px solid white;
+.toggle-btn{
+  position: relative;
+  width: 72px;
+  height: 37px;
   margin: 30px;
+  border-radius: 40px;
 }
 
-.switch-button-case {
-  background: none;
-  width: 50%;
+input[type="checkbox"] {
+  width: 100%;
   height: 100%;
-  color: white;
-  border: none;
-  transition: 0.3s ease all;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-align: center;
-}
-
-.switch-button-case:hover {
-  color: grey;
-  cursor: pointer;
-}
-
-.switch-button-case:focus {
-  outline: none;
-}
-
-.switch-button .active {
-  color: #2F2A2F;
-  background-color: white;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: -1;
-  transition: 0.3s ease-out all;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
 }
 
-.switch-button .active-case {
-  color: #2F2A2F;
+#_1st-toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #fff;
+  border-radius: 40px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
 }
 
-.purple-underline {
-  background-image: linear-gradient(180deg, transparent 65%, #836574 0);
-  background-repeat: no-repeat;
-  background-size: 0 100%;
-  transition: background-size .4s ease;
+#_1st-toggle-btn span:before,#_1st-toggle-btn span:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
 }
 
-.purple-underline:hover {
-  background-size: 100% 100%;
-  letter-spacing: 1px;
-  transition: all 0.7s;
+#_1st-toggle-btn span:before {
+  background-color: #fff;
+  transform: translate(-58px,0px);
+  z-index: 1;
+}
+
+#_1st-toggle-btn span:after{
+  background-color: #000;
+  transform: translate(4px,0px);
+  z-index: 0;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #000;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: #000;
+  transform: translate(28px,-10px);
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: #fff;
+  transform: translate(38px,0px);
 }
 
 .blue-underline {
-  background-image: linear-gradient(180deg, transparent 65%, #B8D9C8 0);
+  background-image: linear-gradient(180deg, transparent 65%, #5c7083 0);
   background-repeat: no-repeat;
   background-size: 0 100%;
   transition: background-size .4s ease;
@@ -184,28 +168,6 @@ a {
   transition: all 0.7s;
 }
 
-.line-break {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  padding: 20px 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 5px solid #B8D9C8;
-  padding: 0;
-  width: 25%;
-}
-
-#tools {
-  color: #4e464e;
-  font-size: 3vh;
-  padding: 0 5px;
-}
-
 .project-name {
   max-width: fit-content;
   cursor: pointer;
@@ -214,14 +176,8 @@ hr {
 
 .project-item-container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-}
-
-.project-item {
-  min-height: 100vh;
   width: 100%;
 }
 
@@ -247,15 +203,17 @@ a {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 50%;
+  padding-bottom: 50px;
   text-align: left;
+  min-height: 50vh;
 }
 
 .section-image {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 img {
@@ -270,23 +228,35 @@ img {
   align-items: center;
 }
 
-.link-button {
+button {
   text-align: center;
   cursor: pointer;
   height: 40px;
   padding: 10px;
   transition: 0.3s ease all;
-  border: 1px solid white;
   border-radius: 0em;
-  background: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
-.link-button:hover{
+.button-day-mode {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border: none;
+}
+
+.button-night-mode {
+  background-color: #13171b;
+  border: 1px solid #13171b;
+  border: none;
+  color: #E1CFC5;
+}
+
+button:hover{
   transition: 0.3s ease all;
   background: none;
+  border: 1px solid white;
   color: #fff;
 }
 
@@ -315,12 +285,29 @@ input, textarea {
   margin: 5px 0;
   width: 100%;
   text-align: left;
-  color: #4e464e;
   font-size: 3vh;
   font-family: 'Inter';
   border: none;
-  box-shadow: 0px 0.5px 2px #4e464e;
-  border-radius: 2px;
+}
+
+.input-day-mode {
+  background-color: #fff;
+  color: #2F2A2F;
+}
+
+.input-night-mode {
+  background-color: #13171b;
+  color: #E1CFC5;
+}
+
+.textarea-day-mode {
+  background-color: #fff;
+  color: #2F2A2F;
+}
+
+.textarea-night-mode {
+  background-color: #13171b;
+  color: #E1CFC5;
 }
 
 input:hover, textarea:hover {
@@ -348,35 +335,35 @@ footer {
   height: 20vh;
 }
 
+.footer-day-mode {
+  background-color: white;
+}
+
+.footer-night-mode {
+  background-color: #13171b;
+}
+
 i {
   font-size: 30px;
   padding: 0 30px;
-  color:#2F2A2F;
+}
+
+.tools {
+  padding: 0 10px;
 }
 
 .social-media:hover {
   transform: scale(1.1);
   transition: all 0.4s;
   cursor: pointer;
-  color:  #4e464e;
 }
 
 .social-media {
   font-size: 30px;
   padding: 0 30px;
-  color:#2F2A2F;
 }
-
-.social-media:hover {
-  font-size: 35px;
-  transition: all 0.2s ease-in-out;
-  color:  #4e464e;
-  cursor: pointer;
-}
-
 
 #labels {
-  color: #4e464e;
   font-size: 3vh;
 }
 
@@ -388,7 +375,6 @@ i {
   line-height: .9em;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.5px;
-  color: white;
 }
 
 .ml10 .text-wrapper {
@@ -441,5 +427,82 @@ i {
 
   .header-content {
     height: 80vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .toggle-btn{
+    position: relative;
+    width: 36px;
+    height: 20px;
+    margin: 15px;
+    border-radius: 40px;
+  }
+  
+  input[type="checkbox"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  #_1st-toggle-btn span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 40px;
+    transition: 0.2s ease background-color, 0.2s ease opacity;
+  }
+  
+  #_1st-toggle-btn span:before,#_1st-toggle-btn span:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: 0.5s ease transform, 0.2s ease background-color;
+  }
+  
+  #_1st-toggle-btn span:before {
+    background-color: #fff;
+    transform: translate(-29px,0px);
+    z-index: 1;
+  }
+  
+  #_1st-toggle-btn span:after{
+    background-color: #000;
+    transform: translate(2px,0px);
+    z-index: 0;
+  }
+  
+  #_1st-toggle-btn input[type="checkbox"]:checked + span {
+    background-color: #000;
+  }
+  
+  #_1st-toggle-btn input[type="checkbox"]:active + span {
+    opacity: 0.5;
+  }
+  
+  #_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+    background-color: #000;
+    transform: translate(14px,-5px);
+  }
+  
+  #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+    background-color: #fff;
+    transform: translate(19px,0px);
   }
 }
