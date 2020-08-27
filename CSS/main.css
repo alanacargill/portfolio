@@ -12,7 +12,7 @@ body {
 .inter300 {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 4vh;
+  font-size: 4vw;
   line-height: 1.5em;
   margin: .2em 0 .6em;
   letter-spacing: 0.5px;
@@ -30,7 +30,7 @@ body {
 .copy-text {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 3vh;
+  font-size: 3vw;
   line-height: 1.7em;
   margin: .2em 0 .6em;
   letter-spacing: 0.5px;
@@ -68,7 +68,7 @@ nav {
 }
 
 #nav-link {
-  font-size: 4vh;
+  font-size: 4vw;
   margin: 30px;
   cursor: pointer;
 }
@@ -281,11 +281,11 @@ button:hover{
 }
 
 input, textarea {
-  padding: 10px;
+  padding: 20px 0;
   margin: 5px 0;
   width: 100%;
   text-align: left;
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: 'Inter';
   border: none;
 }
