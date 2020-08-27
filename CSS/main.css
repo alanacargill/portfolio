@@ -19,7 +19,7 @@ body {
 }
 
 .inter900 {
-  font-size: 7vw;
+  font-size: 6vw;
   line-height: 1.1em;
   line-height: .9em;
   font-family: 'Inter', sans-serif;
@@ -281,8 +281,8 @@ button:hover{
 }
 
 input, textarea {
-  padding: 20px 0;
-  margin: 5px 0;
+  padding: 10px;
+  margin: 15px 0;
   width: 100%;
   text-align: left;
   font-size: 3vw;
