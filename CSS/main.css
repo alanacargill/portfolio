@@ -207,7 +207,6 @@ a {
   width: 50%;
   padding-bottom: 50px;
   text-align: left;
-  min-height: 50vh;
 }
 
 .section-image {
@@ -286,7 +285,7 @@ input, textarea {
   margin: 5px 0;
   width: 100%;
   text-align: left;
-  font-size: 1vw;
+  font-size: 1.75vw;
   font-family: 'Inter';
   border: none;
 }
@@ -326,6 +325,10 @@ textarea {
   align-self: center;
   justify-self: center;
   margin-top: 20px;
+}
+
+#labels {
+  font-size: 1.75vw;
 }
 
 footer {
@@ -398,7 +401,43 @@ h1 {
   opacity: 0;
 }
 
-@media all and (max-width: 600px) {
+/* image slider */
+
+.container {
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+  user-select: none;
+  background-image: url(/Project-images/Random-quote-generator.PNG);
+  box-shadow: 0 11px 22px rgba(0, 0, 0, 0.2), 0 7px 7px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+}
+
+.container .slide_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .slide_img img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 685px) {
+  .container {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+}
+
+@media (max-width: 600px) {
 
   .contact-section {
     display: flex;
@@ -419,20 +458,33 @@ h1 {
     padding: 0 5px;
   }
 
-}
-
-@media (max-width: 975px) {
-
   nav {
-    position: sticky;
+    padding-bottom: 50px;
+  }
+
+  header {
+    height: auto;
   }
 
   .header-content {
-    height: 80vh;
+    height: auto;
+    padding-bottom: 30px;
   }
-}
 
-@media (max-width: 600px) {
+  .social-media {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 2vw;
+  }
+
+  .inter300, #labels, input, textarea {
+    font-size: 3vw;
+  }
+
   .toggle-btn{
     position: relative;
     width: 36px;
@@ -506,5 +558,15 @@ h1 {
   #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
     background-color: #fff;
     transform: translate(19px,0px);
+  }
+
+  .project-item-text {
+    padding-bottom: 20px
+  }
+}
+
+@media (max-width: 975px) {
+  nav {
+    position: sticky;
   }
 }
