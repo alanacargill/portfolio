@@ -1,13 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    var toggle = document.querySelector('.toggle-btn');
-    var mode = document.querySelector('.day-mode');
-    var button = document.querySelectorAll('button');
-    var footer = document.querySelector('footer');
-    var input = document.querySelectorAll('input');
-    var textArea = document.querySelector('textarea')
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    const toggle = document.querySelector('.toggle-btn');
+    const mode = document.querySelector('.day-mode');
+    const button = document.querySelectorAll('button');
+    const footer = document.querySelector('footer');
+    const input = document.querySelectorAll('input');
+    const textArea = document.querySelector('textarea')
+    const toggleCheckbox = document.getElementById('_1st-toggle-btn').getElementsByTagName('input')[0];
+
+    let isDark = getParameterByName('darkMode') === 'true'
+
+    if (isDark) {
+        toggleCheckbox.checked = true;
+        toggleNightMode();
+    }
 
     toggle.addEventListener('click', function(){
+        isDark = !isDark;
+        toggleNightMode();
+    }, false); 
+
+    function toggleNightMode() {
         $(mode).toggleClass('day-mode');
         $(mode).toggleClass('night-mode');
         $(button).toggleClass('button-day-mode');
@@ -18,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
         $(input).toggleClass('input-night-mode');
         $(textArea).toggleClass('textarea-day-mode');
         $(textArea).toggleClass('textarea-night-mode');
-    }, false); 
+    }
+
+    for(var i = 0, anchors = document.getElementsByTagName("a"); i < anchors.length; ++i) {
+        anchors[i].addEventListener('click', function(e) {
+            if (e.target.href.substring(0, 4) !== 'http') {
+                e.preventDefault();
+                window.location.href = e.target.href + "?darkMode=" + isDark;
+            }
+        });
+    }
     
 }, false);

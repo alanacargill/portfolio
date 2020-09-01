@@ -69,8 +69,30 @@ nav {
 
 #nav-link {
   font-size: 2vw;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 30px;
   cursor: pointer;
+}
+.fa-chevron-right {
+  padding: 0;
+  font-size: 1.5vw;
+  padding-left: 20px;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-5px); }
+}
+@keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-5px); }
 }
 
 a {
@@ -231,7 +253,9 @@ img {
 button {
   text-align: center;
   cursor: pointer;
-  height: 40px;
+  font-weight: 300;
+  font-size: 1.25vw;
+  line-height: 1.5em;
   padding: 10px;
   transition: 0.3s ease all;
   border-radius: 0em;
@@ -378,7 +402,6 @@ h1 {
   font-size: 6vw;
   line-height: 1.1em;
   line-height: .9em;
-  font-family: 'Inter', sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -411,7 +434,6 @@ h1 {
   height: 0;
   padding-bottom: 40%;
   user-select: none;
-  background-image: url(/Project-images/Random-quote-generator.PNG);
   box-shadow: 0 11px 22px rgba(0, 0, 0, 0.2), 0 7px 7px rgba(0, 0, 0, 0.24);
   margin-bottom: 20px;
 }
@@ -434,6 +456,14 @@ h1 {
     width: 100%;
     height: 0;
     padding-bottom: 55%;
+  }
+
+   .inter300, #labels, input, textarea {
+    font-size: 3vw;
+  }
+
+  #nav-link {
+    font-size: 3.5vw;
   }
 }
 
@@ -459,7 +489,7 @@ h1 {
   }
 
   nav {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   header {
@@ -471,18 +501,12 @@ h1 {
     padding-bottom: 30px;
   }
 
-  .social-media {
-    font-size: 20px;
-  }
-
   button {
-    padding: 10px;
-    margin: 5px 0;
     font-size: 2vw;
   }
 
-  .inter300, #labels, input, textarea {
-    font-size: 3vw;
+  .social-media {
+    font-size: 20px;
   }
 
   .toggle-btn{
@@ -562,6 +586,10 @@ h1 {
 
   .project-item-text {
     padding-bottom: 20px
+  }
+
+  .fadein {
+    opacity: 1;
   }
 }
 
