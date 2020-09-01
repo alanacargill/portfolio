@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for(var i = 0, anchors = document.getElementsByTagName("a"); i < anchors.length; ++i) {
         anchors[i].addEventListener('click', function(e) {
-            if (e.target.href.substring(0, 4) !== 'http') {
+            if (e.target.href.startsWith('https://www.alanacargill.co.uk')) {
                 e.preventDefault();
                 window.location.href = e.target.href + "?darkMode=" + isDark;
             }
