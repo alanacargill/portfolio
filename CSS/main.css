@@ -18,7 +18,7 @@ body {
 }
 
 .inter900 {
-  font-size: 5vw;
+  font-size: 4.5vw;
   line-height: 1.1em;
   line-height: .9em;
   font-family: 'Inter', sans-serif;
@@ -76,6 +76,16 @@ nav {
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
 }
+
+.fa-chevron-left {
+  padding: 0;
+  font-size: 1.5vw;
+  padding-right: 20px;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+
 
 @-webkit-keyframes mover {
   0% { transform: translateX(0); }
@@ -390,7 +400,7 @@ h1 {
 .ml10 {
   position: relative;
   font-weight: 900;
-  font-size: 6vw;
+  font-size: 5vw;
   line-height: 1.1em;
   line-height: .9em;
   letter-spacing: 0.5px;
@@ -445,7 +455,7 @@ h1 {
   header {
     align-items: flex-start;
   }
-  
+
   .inter300, #labels, input, textarea {
     font-size: 3vw;
   }
