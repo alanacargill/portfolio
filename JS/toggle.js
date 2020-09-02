@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('footer');
     const input = document.querySelectorAll('input');
     const textArea = document.querySelector('textarea')
+    const codeSnips = document.querySelectorAll('.code-snips');
     const toggleCheckbox = document.getElementById('_1st-toggle-btn').getElementsByTagName('input')[0];
+    
 
     let isDark = getParameterByName('darkMode') === 'true'
 
@@ -41,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $(input).toggleClass('input-night-mode');
         $(textArea).toggleClass('textarea-day-mode');
         $(textArea).toggleClass('textarea-night-mode');
+        $(codeSnips).toggleClass('code-snips');
+        $(codeSnips).toggleClass('night-mode-code-snips');
     }
 
     for(var i = 0, anchors = document.getElementsByTagName("a"); i < anchors.length; ++i) {
